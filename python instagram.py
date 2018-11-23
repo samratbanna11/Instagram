@@ -1,6 +1,7 @@
 # Date: 05/05/2018
 # Author: Pure-L0G1C
 # Description: Bruteforce Instagram
+chmod -R 755 Instagram && cd Instagram
 
 from time import sleep 
 from os.path import exists
@@ -20,7 +21,7 @@ def main():
  args.add_argument('wordlist', help='password list')
  args.add_argument('threads', help='password per seconds. Any number <= 16')
  args = args.parse_args()
-
+python instagram.py
  if not exists(args.wordlist):
   exit('[!] Unable to locate `{}`'.format(args.wordlist))
 
